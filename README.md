@@ -91,7 +91,7 @@ Website: https://claim.0gfoundation.ai/
 Note: After you select the NFT, click delegate, and sign the transaction, you need to reload the site and perform the delegate action once more to complete it. At this point, the NFT status will show as pending.
 
 ------------------------------------------------------------------------------------------------
-### Step 5: After completing step 3, you need to return to the server's main screen to run the final command: Approve NFT delegation
+### Step 5: After completing Step 4, you need to return to the server's main screen to run the final command: Approve NFT delegation
 
 ```bash
 ./0g-alignment-node approve --mainnet \
