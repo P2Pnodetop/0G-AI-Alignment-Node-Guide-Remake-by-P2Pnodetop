@@ -47,6 +47,7 @@ export ZG_ALIGNMENT_NODE_LOG_LEVEL=debug
 export ZG_ALIGNMENT_NODE_SERVICE_IP="http://IP Public:34567"  # Example: http://36.50.176.xxx:34567
 export ZG_ALIGNMENT_NODE_SERVICE_PRIVATEKEY= Enter the private key that holds the NFT here, omit the 0x
 ```
+After finishing your edits, press Ctrl X then Y then Enter to save and exit.
 d. Open port on Firewall
 ```bash
 sudo ufw allow 34567/tcp
