@@ -82,6 +82,7 @@ time="2025-09-24T12:36:20+02:00" level=info msg="Verified identity result" addre
 time="2025-09-24T12:36:20+02:00" level=info msg="Starting server on port 34567"
 ```
 d. After finishing, you need to press Ctrl A + D to detach and return to the main screen.
+
 Note: If you want to check the status of the screen, you need to type:
  ```bash
  screen -r AI0G
