@@ -60,7 +60,7 @@ source .env
 ```
 b. Register the operator: Before performing this step, you need to have some ETH on the ARB mainnet in your wallet to cover the fees.
 ```bash
-./0g-alignment-node registerOperator --key <Privatekey> --token-id <ID NFT> --chain-id 42161 --rpc https://arbitrum-one-rpc.publicnode.com --contract 0xdD158B8A76566bC0c342893568e8fd3F08A9dAac
+./0g-alignment-node registerOperator --key <Privatekey> --token-id <ID NFT> --commission 1 --chain-id 42161 --rpc https://arbitrum-one-rpc.publicnode.com --contract 0xdD158B8A76566bC0c342893568e8fd3F08A9dAac
 ```
 Note:
 ```bash
