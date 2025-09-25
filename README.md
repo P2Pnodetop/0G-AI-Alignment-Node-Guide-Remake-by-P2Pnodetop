@@ -61,9 +61,10 @@ b. Register the operator: Before performing this step, you need to have some ETH
 ./0g-alignment-node registerOperator --key <Privatekey> --token-id <ID NFT> --chain-id 42161 --rpc https://arbitrum-one-rpc.publicnode.com --contract 0xdD158B8A76566bC0c342893568e8fd3F08A9dAac
 ```
 ### Note:
+```bash
 --key <Privatekey>: Enter the private key that holds the NFT here, omit the 0x.
 --token-id <ID NFT>: If your wallet has 5 NFTs, you only need to enter 1 NFT ID as a representative, no need to enter all 5.
-
+```
 c. Start your Node:
 ```bash
 ./0g-alignment-node start --mainnet > node.log 2>&1 &
@@ -98,10 +99,11 @@ Step 4: After completing step 3, you need to return to the server's main screen 
   --tokenIds <ID1,ID2,ID3,ID4,ID5>
 ```
 ### Note: 
--`-key <Privatekey>`: Enter the private key of the regisOperator wallet.
--`-destNode <Address hold NFT>`: The wallet address holding the NFT is required to delegate into the regisOperator wallet.
--`-tokenIds <ID1,ID2,ID3,ID4,ID5>`: Enter the NFT ID of the destNode wallet
-
+```bash
+--key <Privatekey>: Enter the private key of the regisOperator wallet.
+--destNode <Address hold NFT>: The wallet address holding the NFT is required to delegate into the regisOperator wallet.
+--tokenIds <ID1,ID2,ID3,ID4,ID5>: Enter the NFT ID of the destNode wallet
+```
 Result: After running it, please go back to the dashboard to check that the status has changed from pending to delegated.
 ![System Requirements](Images0G/Delegated.png)
 
