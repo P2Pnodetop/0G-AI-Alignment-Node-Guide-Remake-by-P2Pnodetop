@@ -41,16 +41,16 @@ b. Edit the .env file with your configuration:
 ```bash
 nano .env
 ```
-c. Open port on Firewall
-```bash
-sudo ufw allow 34567/tcp
-sudo ufw reload
-```
-d. Configure the following parameters:
+c. Configure the following parameters:
 ```bash
 export ZG_ALIGNMENT_NODE_LOG_LEVEL=debug
 export ZG_ALIGNMENT_NODE_SERVICE_IP="http://IP Public:34567"  # Example: http://36.50.176.xxx:34567
 export ZG_ALIGNMENT_NODE_SERVICE_PRIVATEKEY= Enter the private key that holds the NFT here, omit the 0x
+```
+d. Open port on Firewall
+```bash
+sudo ufw allow 34567/tcp
+sudo ufw reload
 ```
 Step 3: Start Your Node
 a. Load environment variables:
