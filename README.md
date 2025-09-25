@@ -8,7 +8,6 @@ Step-by-step guide to set up and run a 0G AI Alignment Node, including installat
 Step 1: Install dependencies, if needed
 
 ```bash
-install dependencies, if needed
 sudo apt update && sudo apt upgrade -y
 sudo apt install curl git wget htop screen build-essential jq make lz4 gcc unzip -y
 ```
