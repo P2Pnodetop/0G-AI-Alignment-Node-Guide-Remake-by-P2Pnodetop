@@ -5,7 +5,7 @@ Step-by-step guide to set up and run a 0G AI Alignment Node, including installat
 ![System Requirements](Images0G/Requirement.png)
 
 ## 2. Installation & Setup
-Step 1: Install dependencies, if needed
+### Step 1: Install dependencies, if needed
 
 ```bash
 sudo apt update && sudo apt upgrade -y
@@ -31,7 +31,8 @@ tar -xzf alignment-node.tar.gz
 cd alignment-node
 chmod +x 0g-alignment-node
 ```
-Step 2: Configure Environment
+------------------------------------------------------------------------------------------------
+### Step 2: Configure Environment
 a. Copy the example environment file:
 ```bash
 cp .env.example .env
@@ -51,7 +52,8 @@ d. Open port on Firewall
 sudo ufw allow 34567/tcp
 sudo ufw reload
 ```
-Step 3: Start Your Node
+------------------------------------------------------------------------------------------------
+### Step 3: Start Your Node
 a. Load environment variables:
 ```bash
 source .env
@@ -60,7 +62,7 @@ b. Register the operator: Before performing this step, you need to have some ETH
 ```bash
 ./0g-alignment-node registerOperator --key <Privatekey> --token-id <ID NFT> --chain-id 42161 --rpc https://arbitrum-one-rpc.publicnode.com --contract 0xdD158B8A76566bC0c342893568e8fd3F08A9dAac
 ```
-### Note:
+Note:
 ```bash
 --key <Privatekey>: Enter the private key that holds the NFT here, omit the 0x.
 --token-id <ID NFT>: If your wallet has 5 NFTs, you only need to enter 1 NFT ID as a representative, no need to enter all 5.
@@ -78,16 +80,18 @@ time="2025-09-24T12:36:20+02:00" level=info msg="Verified identity result" addre
 time="2025-09-24T12:36:20+02:00" level=info msg="Starting server on port 34567"
 ```
 d. After finishing, you need to press Ctrl A + D to detach and return to the main screen.
- ### Note: 
- If you want to check the status of the screen, you need to type:
+Note: If you want to check the status of the screen, you need to type:
  ```bash
  screen -r AI0G
  ```
-Step 3: Delegate the wallet holding the NFT to the Operator on the 0G dashboard
+------------------------------------------------------------------------------------------------
+### Step 4: Delegate the wallet holding the NFT to the Operator on the 0G dashboard
 Website: https://claim.0gfoundation.ai/
 ![System Requirements](Images0G/Delegateondashboard.png)
-### Note: After you select the NFT, click delegate, and sign the transaction, you need to reload the site and perform the delegate action once more to complete it. At this point, the NFT status will show as pending.
-Step 4: After completing step 3, you need to return to the server's main screen to run the final command: Approve NFT delegation
+Note: After you select the NFT, click delegate, and sign the transaction, you need to reload the site and perform the delegate action once more to complete it. At this point, the NFT status will show as pending.
+
+------------------------------------------------------------------------------------------------
+### Step 5: After completing step 3, you need to return to the server's main screen to run the final command: Approve NFT delegation
 
 ```bash
 ./0g-alignment-node approve --mainnet \
@@ -98,7 +102,7 @@ Step 4: After completing step 3, you need to return to the server's main screen 
   --destNode <Address hold NFT> \
   --tokenIds <ID1,ID2,ID3,ID4,ID5>
 ```
-### Note: 
+Note: 
 ```bash
 --key <Privatekey>: Enter the private key of the regisOperator wallet.
 --destNode <Address hold NFT>: The wallet address holding the NFT is required to delegate into the regisOperator wallet.
@@ -107,6 +111,7 @@ Step 4: After completing step 3, you need to return to the server's main screen 
 Result: After running it, please go back to the dashboard to check that the status has changed from pending to delegated.
 ![System Requirements](Images0G/Delegated.png)
 
+------------------------------------------------------------------------------------------------
 ### Node command help
 ```bash
 ./0g-alignment-node --help
