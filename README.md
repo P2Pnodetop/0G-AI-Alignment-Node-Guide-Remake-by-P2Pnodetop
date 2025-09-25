@@ -60,15 +60,16 @@ b. Register the operator: Before performing this step, you need to have some ETH
 ```bash
 ./0g-alignment-node registerOperator --key <Privatekey> --token-id <ID NFT> --chain-id 42161 --rpc https://arbitrum-one-rpc.publicnode.com --contract 0xdD158B8A76566bC0c342893568e8fd3F08A9dAac
 ```
-  ### Note:
-  --key <Privatekey>: Enter the private key that holds the NFT here, omit the 0x
-  --token-id <ID NFT>: If your wallet has 5 NFTs, you only need to enter 1 NFT ID as a representative, no need to enter all 5.
+### Note:
+--key <Privatekey>: Enter the private key that holds the NFT here, omit the 0x.
+--token-id <ID NFT>: If your wallet has 5 NFTs, you only need to enter 1 NFT ID as a representative, no need to enter all 5.
 
 c. Start your Node:
 ```bash
 ./0g-alignment-node start --mainnet > node.log 2>&1 &
 ```
 View logs: /root/alignment-node/node.log
+
 Result: 
 ![System Requirements](Images0G/Logsfile.png)
 ```bash
